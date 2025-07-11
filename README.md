@@ -24,35 +24,33 @@ DHT11 선을 아두이노의 5V,GND,D2에 연결한다.
 
 우리는 제슨을 쓰니 chat 대신 jetson을 치면 된다.
 
-/include <SimpleDHT.h>
-
-int pinDHT112 SimpleDHT11 dht11(pinDHT11);
+'''
+#include <SimpleDHT.h>
+int pinDHT11=2;
+SimpleDHT11 dht11(pinDHT11);
 
 void setup() {
-
-C
-
 Serial.begin(115200);
-
-void loop() {
-
-byte temperature = 0; byte humidity = 0;
-
-if (dht11.read(&temperature, &humidity, NULL) ==
-
-SimpleDHTErrSuccess) ( int temp (int)temperature:
-
-int humid (int)humidity:
-
-#유효한 범위민지 확인 if (temp >= 0 && temp <= 50 && humid >= 0 && humid <= 100) {
-
 }
 
+void loop() {
+byte temperature = 0;
+byte humidity = 0;
+
+if (dht11.read(&temperature, &humidity, NULL) ==
+SimpleDHTErrSuccess) {
+int temp (int)temperature;
+int humid (int)humidity;
+
+#유효한 범위민지 확인 
+if (temp >= 0 && temp <= 50 && humid >= 0 && humid <= 100) {
 Serial.print(temp);
-
-Serial.print(".");
-
+Serial.print(",");
 Serial.println(humid);
+}
+}
 
-delay(2000); // 2초대기/
+delay(2000);
+}
+'''
 
