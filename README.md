@@ -2,14 +2,26 @@
 
 ***
 
-###준비물
+### 준비물
 
 1. jetson-nano
 2. arduino Uno
 3. DHT11 온습도 센서
 
-###회로 준비하기
+### 아두이노 세팅하기
 
 DHT11 선을 아두이노의 5V,GND,D2에 연결한다.
+
+회로도
+
+![IMG_0673](https://github.com/user-attachments/assets/381c31d4-f013-47c1-83f3-cf872e0592a5)
+
+![IMG_0674](https://github.com/user-attachments/assets/627b00a0-67da-4a9a-8d35-610e5213ab76)
+
+회로를 이렇게 연결했다면, 제슨에 arduino.cc 1.8.19 버전을 깔아야 한다.
+
+![IMG_0675](https://github.com/user-attachments/assets/1d24e802-f054-4275-8d6b-6055178f16e8)
+
+우리는 제슨을 쓰니 chat 대신 jetson을 치면 된다.
 
 
