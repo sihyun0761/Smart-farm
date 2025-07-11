@@ -2,4 +2,8 @@
 
 ***
 
+###준비물
+
+1. jetson-nano
+2. arduino Uno
 
